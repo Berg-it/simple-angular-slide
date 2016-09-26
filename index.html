@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="BergIt">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>
+    document.write('<base href="' + document.location + '" />');
+    </script>
+    <link href="index.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <script data-semver="1.2.13" src="http://code.angularjs.org/1.2.13/angular.js" data-require="angular.js@1.2.x"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-controller="MainCtrl" style="position:relative">
+    <!-- picture div -->
+    <div style="position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+        <h3>Statistiques</h3>
+        <div class="p1" style="position: relative">
+            <i class="fa fa-chevron-left pointer-cursor" aria-hidden="true" style="
+                                       position: absolute;left:2px;z-index: 7;font-size: 21px;top: 63px;color:#828282;" ng-click='previousStat()'
+                                       ng-if="!disablePrevButton">
+
+                                    </i>
+            <i class="fa fa-chevron-right pointer-cursor" aria-hidden="true" style="
+                                       position: absolute;right:4px;z-index: 7;font-size: 21px;top: 63px;color:#828282;" ng-click='nextStat()'
+                                       ng-if="!disableNextButton">
+
+                                    </i>
+            <ul class="p2" ng-style="{ 'width' : containerWidth,'margin-left':containerFloat}">
+                <li ng-repeat='item in dataPicture' class="child-p2" ng-style="{ 'width' : childWidth}">
+                    <div layout="column">
+                        <div>
+                            <img ng-src="{{item.src}}" />
+                        </div>
+                        <div class="value-stat">
+                            21
+                        </div>
+                        <div class="value-stat-title">
+                            (Chef de Famille)
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

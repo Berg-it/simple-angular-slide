@@ -1,0 +1,42 @@
+.p1 {
+    overflow: hidden;
+    height: 200px;
+    width: 300px;
+}
+
+.p2 {
+    height: 200px;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    transition: all 300ms ease;
+}
+
+.child-p2 {
+    float: left;
+    height: 200px;
+    list-style-type: none;
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 87px;
+        width: 51%;
+    }
+    .value-stat {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 18px;
+        color: $flush-orange;
+    }
+    .value-stat-title {
+        @extend .value-stat;
+        font-family: 'roboto-medium';
+        font-size: 13px !important;
+        color:$tundora !important;
+    }
+}
+
+.pointer-cursor {
+  cursor: pointer; }
